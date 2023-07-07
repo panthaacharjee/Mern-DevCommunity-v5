@@ -1,0 +1,213 @@
+.single-question-container {
+  display: block;
+  width: 70%;
+  margin: 0px auto;
+  margin-top: 90px;
+}
+.single-question-header {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+}
+.single-question-header > .section-1 {
+  display: flex;
+  align-items: center;
+}
+.single-question-header > .section-1 > p {
+  font-size: 13px;
+  margin-right: 20px;
+}
+.single-question-header > .section-2 {
+  margin-top: 20px;
+}
+.single-question-header > .section-3 {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.single-question-header > .section-3 > p {
+  margin-right: 5px;
+  background-color: #7b7b7b;
+  padding: 2px 18px;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.single-question-header > .section-4 {
+  display: flex;
+  margin-top: 20px;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+}
+.single-question-header > .section-4 > div {
+  display: flex;
+}
+.single-question-header > .section-4 > div > p {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+/* Question Answer */
+.single-question-middle > p {
+  margin: 20px 0px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.answer-container {
+  background-color: #e5e5e5;
+  margin: 10px 0px;
+  padding: 20px 15px;
+  border-radius: 8px;
+}
+.answer-container > .user-box {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.answer-container > .user-box > div {
+  display: flex;
+}
+.answer-container > .user-box > div > img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.answer-container > .user-box > div > div {
+  margin-left: 10px;
+}
+.user-box-edit {
+  position: relative;
+}
+.user-box-edit > div {
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  background-color: #000000;
+  width: 100px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.user-box-edit > div > p {
+  color: #fff;
+  cursor: pointer;
+}
+.user-box-edit > div > p > span {
+  margin-right: 10px;
+  margin-top: 5px;
+  display: inline-block;
+}
+.user-box-edit > span {
+  cursor: pointer;
+}
+.answer-like {
+  display: flex;
+  margin-top: 20px;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+}
+.answer-like > div {
+  display: flex;
+}
+.answer-like > div > p {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.single-question-footer {
+  margin: 20px 0px;
+}
+.single-question-footer > p {
+  margin: 10px 0px;
+  font-size: 18px;
+}
+.single-question-footer > button {
+  cursor: pointer;
+  padding: 8px 35px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  margin-top: 15px;
+  font-weight: 600;
+}
+.single-question-footer > button:hover {
+  background-color: #141313;
+  color: #fff;
+}
+.single-question-footer > button:focus {
+  background-color: #000;
+  color: #fff;
+}
+.single-question-footer > a {
+  cursor: pointer;
+  padding: 8px 35px;
+  background-color: #000;
+  color: #fff;
+  margin-top: 15px !important;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Answer Update CSS */
+.answer-update-container {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 11111;
+  background-color: #000000c7;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.answer-update-box {
+  width: 50%;
+  background: #7b7b7b;
+}
+
+.answer-update-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+.answer-update-header > p {
+  color: #fff;
+  font-size: 18px;
+}
+.answer-update-header > span {
+  margin-top: 4px;
+  cursor: pointer;
+}
+.answer-update-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.answer-update-footer > button {
+  cursor: pointer;
+  padding: 8px 35px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+
+  font-weight: 600;
+}
+
+.profile-question-delete-box {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}

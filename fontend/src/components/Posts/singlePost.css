@@ -1,0 +1,293 @@
+.single-post-container {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: #000000d6;
+  top: 30px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.single-post-box {
+  background-color: #5e5d5d;
+  width: 50%;
+}
+
+.single-post-header {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid #0000005b;
+  color: #fff;
+}
+.single-post-header > span {
+  margin-top: 8px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.single-post-middle {
+  max-height: 380px;
+  overflow: auto;
+}
+.post-owner-details {
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+}
+.post-owner-details > img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.post-owner-details > div {
+  margin-left: 10px;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+}
+.post-owner-details > div > span {
+  font-size: 12px;
+}
+
+.single-post-caption-box {
+  padding: 5px 20px;
+}
+.single-post-caption-box > div {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+.single-post-image-carosel-box {
+  padding: 10px 20px;
+}
+.comments-container {
+  padding: 15px 20px;
+}
+.comments-container > p {
+  text-decoration: dashed;
+  color: #fff;
+  cursor: pointer;
+}
+
+.comment-box {
+  display: flex;
+  align-items: start;
+  margin-top: 10px;
+}
+.comment-box > img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.comment-box-element {
+  background-color: #000;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  min-width: 250px;
+  width: fit-content;
+  position: relative;
+}
+.comment-box-element > img {
+  width: 300px;
+  height: 250px;
+  margin-top: 8px;
+}
+.comment-box-element > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.comment-box-element > div > p {
+  font-size: 16px;
+  font-weight: 600;
+}
+.comment-box-element > div > span {
+  margin-top: 9px;
+  font-size: 18px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.comment-like-reply-box {
+  display: flex;
+  align-items: center;
+  padding: 2px 5px;
+  margin-top: 4px;
+  margin-left: 5px;
+}
+.comment-like-reply-box > p {
+  margin-right: 15px;
+  color: #efefef;
+  font-size: 13px;
+  cursor: pointer;
+}
+.comment-like {
+  position: absolute;
+  bottom: -30px;
+  right: 0px;
+  background-color: #000;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comment-like > span {
+  margin-right: 5px;
+}
+.comment-like > p {
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.comment-like-reply-box {
+  margin-top: 11px;
+}
+.comment-like-reply-box > button {
+  margin-left: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background: none;
+}
+/* Comment CSS */
+.single-post-footer {
+  background-color: #000;
+  display: flex;
+  padding: 16px 20px;
+}
+.single-post-footer > img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.single-post-footer > div {
+  margin-left: 10px;
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.single-post-footer > div > input[type="text"] {
+  width: 100%;
+  border-radius: 40px;
+  padding: 2px 10px;
+  border: none;
+}
+.single-post-footer > div > input[type="file"] {
+  display: none;
+}
+.single-post-footer > div > label {
+  color: #000;
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  z-index: 111;
+  font-size: 22px;
+  cursor: pointer;
+}
+.single-post-footer > button {
+  margin-left: 10px;
+  border-radius: 40px;
+  padding: 4px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Create Reply CSS */
+.reply-option-box {
+  padding: 20px 10px;
+  margin-left: 40px;
+}
+.reply-option-box > a {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 15px;
+}
+.create-reply-box {
+  display: flex;
+  margin-bottom: 8px;
+}
+.create-reply-box > img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.create-reply-box > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+  width: 100%;
+}
+.create-reply-box > div > input[type="text"] {
+  padding: 10px 15px;
+  width: 100%;
+}
+.create-reply-box > div > button {
+  padding: 11px 15px;
+  cursor: pointer;
+  background-color: #7c7c7c;
+  color: #fff;
+  border: none;
+}
+.create-reply-box > div > button:hover {
+  background-color: #00818d;
+  color: #000;
+}
+
+/* Reply CSS */
+.reply-box-container {
+  padding: 10px 15px;
+  display: flex;
+  margin-top: 15px;
+}
+.reply-box-container > img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.reply-box {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  min-width: 200px;
+}
+.reply-box > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reply-box div > span {
+  margin-top: 6px;
+  cursor: pointer;
+}
+.reply-box > p {
+  font-size: 11px;
+  margin-bottom: 10px;
+  margin-top: -5px;
+}
+.reply-box > h4 {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+}
+.reply-box-container > div > button {
+  margin-left: 10px;
+  margin-top: 8px;
+  background: #000;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 50px;
+  border: none;
+  font-size: 10px;
+  cursor: pointer;
+}

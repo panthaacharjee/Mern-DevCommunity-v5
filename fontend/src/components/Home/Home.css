@@ -1,0 +1,229 @@
+.home {
+  width: 90%;
+  margin: 0px auto;
+  margin-top: 80px;
+}
+.home-header {
+  background-color: rgb(222, 220, 220);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 0px;
+  border-radius: 8px;
+}
+.home-header > div {
+  text-align: center;
+}
+.home-header > div > p {
+  font-size: 70px;
+}
+.home-header > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.home-header > div > div > button {
+  padding: 8px 26px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.talent-category {
+  /* border: 1px solid #969696; */
+  padding: 25px 0px;
+  margin-top: 10px;
+  /* border-radius: 10px; */
+}
+.talent-category > p {
+  font-size: 24px;
+}
+.talent-category-box {
+  margin-top: 20px;
+}
+.talent-category-content {
+  width: 100%;
+  background-color: #969696;
+  min-height: 80px;
+  padding: 10px 0px;
+  width: 98%;
+  text-align: center;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.talent-category-content > span {
+  font-size: 28px;
+}
+.learn-signup {
+  display: flex;
+  padding: 20px 0px;
+  margin-top: 20px;
+}
+.learn-signup-left {
+  width: 65%;
+}
+.learn-signup-left > p {
+  font-size: 22px;
+}
+
+.learn-signup-left-content {
+  margin-top: 20px;
+}
+.learn-signup-left-content > div {
+  display: flex;
+  margin-top: 20px;
+}
+.learn-signup-left-content > div > span {
+  font-size: 24px;
+  margin-right: 20px;
+}
+.learn-signup-left-content > div > div > p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.learn-signup-right {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.learn-signup-right > img {
+  height: 300px;
+  width: 300px;
+}
+
+/* Find Tallent CSS */
+.find-talent {
+  background: url("../../images/pexels-sora-shimazaki-5926386.jpg"),
+    linear-gradient(#000000ac, #0000009b);
+  background-size: cover;
+  background-position: center center;
+  height: 550px;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 20px 15px;
+  color: #fff;
+}
+.find-talent > p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.find-talent-content {
+  margin-top: 80px;
+  width: 60%;
+}
+.find-talent-content > p {
+  font-size: 50px;
+  font-weight: bold;
+}
+.find-talent-content > label {
+  margin-top: 10px;
+  display: block;
+}
+
+.find-talent-box {
+  background-color: rgb(5, 33, 72);
+  padding: 30px 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+.find-talent-box > p {
+  font-size: 22px;
+  line-height: 30px;
+}
+.find-talent-box > label {
+  display: block;
+  margin-top: 10px;
+}
+/* Support Country CSS */
+
+.support-country {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #3c3c3c;
+  padding: 15px 20px;
+  color: #fff;
+}
+.support-country > div {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+}
+.support-country > div > p {
+  font-size: 22px;
+}
+.support-country > div > label {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #909090;
+}
+.support-country > div > button {
+  width: 20%;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px 0px;
+}
+.support-country > img {
+  width: 140px;
+  height: 140px;
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 30px 20px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+}
+.footer-content-box {
+  width: 90%;
+}
+.footer-content-box > h5 {
+  font-size: 16px;
+}
+.footer-content-box > li {
+  margin-top: 2px;
+  cursor: pointer;
+}
+.footer-content-box > li:hover {
+  text-decoration: underline;
+}
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3c3c3c;
+  margin-top: 30px;
+  padding: 0px 20px;
+}
+.footer-social > div {
+  display: flex;
+  font-size: 30px;
+  margin-top: 20px;
+}
+.footer-social > div > li {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.footer-extra {
+  border-top: 1px solid #000;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+.footer-extra > li {
+  margin-right: 20px;
+}

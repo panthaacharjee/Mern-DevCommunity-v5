@@ -1,0 +1,267 @@
+.single-project-container {
+  width: 82%;
+  margin: 0px auto;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  display: flex;
+  background-color: #898989;
+  border-radius: 9px;
+  border: 1px solid #000;
+  box-shadow: 0px 0px 1px 0px #000;
+}
+.single-project-left-box {
+  width: 80%;
+  border: 1px solid #000;
+  border-right: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.left-box-desc {
+  border-bottom: 1px solid #000;
+  padding: 10px 15px;
+}
+.left-box-desc > label {
+  display: block;
+  margin-top: 20px;
+  color: rgb(1, 21, 29);
+  font-weight: 600;
+}
+.project-location {
+  margin-top: 15px;
+}
+.project-location > span {
+  margin-right: 10px;
+  color: rgb(1, 21, 29);
+}
+.left-box-about {
+  border-bottom: 1px solid #000;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+.left-box-price {
+  border-bottom: 1px solid #000;
+  padding: 10px 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.left-box-price > div {
+  width: 25%;
+  display: flex;
+  align-items: flex-start;
+}
+.left-box-price > div > p {
+  margin-right: 10px;
+  font-size: 22px;
+}
+.left-box-p {
+  font-size: 16px;
+  font-weight: 600;
+}
+.left-box-attachment {
+  border-bottom: 1px solid #000;
+  padding: 10px 15px;
+}
+.left-box-type {
+  border-bottom: 1px solid #000;
+  padding: 10px 15px;
+  display: flex;
+}
+.left-box-type > p {
+  font-weight: 600;
+  margin-right: 10px;
+}
+.left-box-skill {
+  border-bottom: 1px solid #000;
+  padding: 10px 15px;
+}
+.left-box-skill > div {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.left-box-skill > div > p {
+  background-color: #000;
+  color: #fff;
+  padding: 4px 25px;
+  margin-right: 6px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.left-box-activity {
+  padding: 10px 15px;
+}
+.left-box-activity > div {
+  margin: 10px 0px;
+}
+.left-box-activity > div > p {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.left-box-activity > div > p > span {
+  font-size: 14px;
+  margin-left: 14px;
+  font-weight: 400;
+}
+.single-project-right-box {
+  width: 30%;
+  border: 1px solid #000;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.right-box-apply {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-bottom: 1px solid #000;
+}
+.right-box-apply > button {
+  cursor: pointer;
+  background-color: rgb(1, 21, 29);
+  border: 2px solid rgb(1, 21, 29) !important;
+  color: #fff;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 8px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-box-apply > button > p {
+  font-size: 18px;
+  margin-top: 4px;
+}
+.right-box-apply > button > span {
+  font-size: 16px;
+  /* margin-top: 10px;
+  mar
+  display: block; */
+  margin-left: 10px;
+}
+.project-btn-style {
+  background: none !important;
+  padding: 4px 0px !important;
+}
+.right-box-about {
+  padding: 30px 15px;
+  border-bottom: 1px solid #000;
+}
+.right-box-about > div {
+  margin: 10px 0px;
+}
+
+/* Client Project */
+.clinet-poject {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.clinet-poject > a {
+  color: #000;
+}
+.clinet-poject > a:hover {
+  text-decoration: underline;
+}
+
+.apply-project-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.apply-project-box {
+  background-color: #181515;
+  width: 500px;
+  border-radius: 8px;
+}
+.apply-project-header {
+  background-color: #00666d;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.apply-project-header > p {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+}
+.apply-project-header > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+.apply-project-user-box {
+  display: flex;
+  padding: 25px 10px;
+  color: #ffff;
+}
+.apply-project-user-box > img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+.apply-project-user-box > div {
+  margin-left: 15px;
+}
+.apply-project-user-box > div > p {
+  font-size: 14px;
+}
+.apply-project-user-box > div > label {
+  font-size: 14px;
+}
+.apply-bidder-price {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+}
+.apply-bidder-price > span {
+  background-color: #fff;
+  color: #000;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+.apply-bidder-price > input {
+  padding: 10px 5px;
+  width: 100%;
+  border: none;
+}
+.project-applied-btn {
+  margin: 0px auto;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 8px 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.apply-bidder-cv {
+  padding: 0px 15px;
+}
+.apply-bidder-cv > .jodit-container {
+  height: 80px !important;
+}
+.apply-project-time {
+  padding: 10px 15px;
+}
+.apply-project-time > select {
+  width: 100%;
+  padding: 10px 10px;
+}
+.jodit-btn {
+  margin: 0px 15px;
+  padding: 8px 15px;
+  cursor: pointer;
+}

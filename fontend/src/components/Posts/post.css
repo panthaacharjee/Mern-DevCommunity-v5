@@ -1,0 +1,130 @@
+.create-post {
+  width: 50%;
+  margin: 0px auto;
+  margin-top: 80px !important;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 40px;
+}
+.create-post > div {
+  display: flex;
+  align-items: center;
+}
+.create-post > div > a {
+  display: flex;
+  align-items: center;
+}
+.create-post > div > a > img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+}
+.create-post > div > p {
+  margin-left: 10px;
+  color: #a8a7a7;
+  font-size: 15px;
+  cursor: text;
+}
+
+/* Post Css */
+.all-post-container {
+  width: 50%;
+  margin: 0px auto;
+}
+.margin {
+  margin-top: 80px;
+}
+
+.post-conatiner {
+  background-color: aliceblue;
+  border-radius: 20px;
+  border: none;
+  margin-top: 15px;
+}
+.post-header-box {
+  display: flex;
+  padding: 16px 14px;
+  align-items: center;
+}
+.post-header-box > img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.post-header-box > div {
+  margin-left: 8px;
+}
+.post-header-box > div > p {
+  font-size: 18px;
+  font-weight: 600;
+}
+.post-middle-box {
+  width: 100%;
+}
+.caption-box {
+  padding: 5px 16px;
+  position: relative;
+}
+.caption-box > div {
+  width: 100%;
+  position: relative;
+}
+.show-hide-btn > span {
+  color: #a8a7a7;
+}
+.values-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+.values-box > div {
+  display: flex;
+  align-items: center;
+}
+
+.values-box > div > span {
+  margin-top: 2px;
+  margin-right: 8px;
+  font-size: 22px;
+}
+.values-box > div > p {
+  font-size: 18px;
+}
+
+.like-comment-box {
+  border-top: 1px solid #00000074;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+.like-comment-box > div {
+  display: flex;
+  cursor: pointer;
+}
+
+.like-comment-box > div > span {
+  margin-right: 10px;
+  font-size: 22px;
+}
+.like-comment-box > div > p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.profile-post-update-box {
+  height: 70px !important;
+}
+.profile-post-update-box > button {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer !important;
+  margin-top: 10px;
+}
+
+.profile-post-update-box > button > label {
+  margin-left: 10px;
+}

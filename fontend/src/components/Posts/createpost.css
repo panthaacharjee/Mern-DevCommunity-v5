@@ -1,0 +1,81 @@
+/* Create Post */
+.create-post-box {
+  position: absolute;
+  background-color: #000000d6;
+  top: 30px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1111;
+  overflow-y: scroll;
+  left: 0;
+}
+.create-post-box-container {
+  background-color: rgb(75, 75, 75);
+  width: 40%;
+}
+.create-post-header {
+  padding: 10px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  padding: 5px 15px;
+}
+.create-post-header > div {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+.create-post-header > span {
+  color: #fff;
+  font-size: 22px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+/* Create Post Image */
+.create-post-image-box {
+  padding: 5px;
+  background-color: #a8a7a7;
+}
+.create-post-image-box > div > input {
+  display: none;
+}
+.create-post-image-box > div > label {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5e5d5d;
+}
+.post-image-box {
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+  border: 1px solid #7d7c7c;
+  margin-top: 5px;
+  padding: 2px 0px;
+}
+
+.post-image-box > img {
+  height: 100px;
+  width: 100px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.create-post-box-container > button {
+  width: 100%;
+  padding: 15px 0px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background-color: #27272762;
+  color: #fff;
+  cursor: pointer;
+}
