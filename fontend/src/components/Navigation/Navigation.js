@@ -17,7 +17,7 @@ const Navigation = ({ sidebar, setSidebar }) => {
               src="https://cdn-icons-png.flaticon.com/512/3800/3800024.png"
               alt="logo"
             />
-            <span>Developer Community</span>
+            <span>Pro-connectX</span>
           </Link>
         </div>
         {/* <div className="search-box">
