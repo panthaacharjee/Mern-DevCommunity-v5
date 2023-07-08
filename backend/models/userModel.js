@@ -173,6 +173,18 @@ const userSchema = new mongoose.Schema({
       ref: "projects",
     },
   ],
+  completeProjectsDev: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "projects",
+    },
+  ],
+  completeProjectsClient: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "projects",
+    },
+  ],
   myJobs: [
     {
       type: mongoose.Schema.Types.ObjectId,

@@ -12,9 +12,14 @@ const ClientProject = () => {
     save: false,
     applyDev: true,
   };
+  const ongoingOptions = {
+    save: false,
+    appliedDev: false,
+    complite: true,
+  };
   const [appliedDev, setAppliedDev] = useState(false);
   const [appliedDevData, setAppliedDevData] = useState();
-  console.log(appliedDevData);
+  console.log(user);
 
   return (
     <>
@@ -40,6 +45,15 @@ const ClientProject = () => {
                 setAppliedDevData={setAppliedDevData}
               />
             );
+          })}
+        </div>
+        <div className="client-all-project">
+          <h3>Ongoing Projects</h3>
+          {user.ongoingProjectsClient.length <= 0 && (
+            <p>No Projects Found! Create a Project.</p>
+          )}
+          {user.ongoingProjectsClient.map((val, ind) => {
+            return <Project val={val} key={ind} options={ongoingOptions} />;
           })}
         </div>
       </div>

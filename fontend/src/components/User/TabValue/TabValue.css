@@ -304,3 +304,9 @@
 .applied-project-container > h4 {
   margin: 10px 0px;
 }
+.ongoing-project-container {
+  margin-top: 40px;
+}
+.ongoing-project-container > h4 {
+  margin: 10px 0px;
+}

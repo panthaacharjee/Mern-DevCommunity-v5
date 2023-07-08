@@ -89,6 +89,11 @@ const Project = ({ val, options, setAppliedDev, setAppliedDevData }) => {
             Applied Developer
           </button>
         )}
+        {options.complite && (
+          <button className="applied-project-developer-btn">
+            Complite Project
+          </button>
+        )}
       </>
     </div>
   );

@@ -112,6 +112,22 @@ exports.loginUser = catchAsyncError(async (req, res, next) => {
         path: "owner",
         options: { strictPopulate: false },
       },
+    })
+    .populate("ongoingProjectsDev")
+    .populate({
+      path: "ongoingProjectsDev",
+      populate: {
+        path: "owner",
+        options: { strictPopulate: false },
+      },
+    })
+    .populate("ongoingProjectsClient")
+    .populate({
+      path: "ongoingProjectsClient",
+      populate: {
+        path: "owner",
+        options: { strictPopulate: false },
+      },
     });
 
   if (!user) {
@@ -249,6 +265,22 @@ exports.resetPassword = catchAsyncError(async (req, res, next) => {
         path: "owner",
         options: { strictPopulate: false },
       },
+    })
+    .populate("ongoingProjectsDev")
+    .populate({
+      path: "ongoingProjectsDev",
+      populate: {
+        path: "owner",
+        options: { strictPopulate: false },
+      },
+    })
+    .populate("ongoingProjectsClient")
+    .populate({
+      path: "ongoingProjectsClient",
+      populate: {
+        path: "owner",
+        options: { strictPopulate: false },
+      },
     });
 
   if (!user) {
@@ -344,6 +376,22 @@ exports.getUserDetails = catchAsyncError(async (req, res, next) => {
         path: "owner",
         options: { strictPopulate: false },
       },
+    })
+    .populate("ongoingProjectsDev")
+    .populate({
+      path: "ongoingProjectsDev",
+      populate: {
+        path: "owner",
+        options: { strictPopulate: false },
+      },
+    })
+    .populate("ongoingProjectsClient")
+    .populate({
+      path: "ongoingProjectsClient",
+      populate: {
+        path: "owner",
+        options: { strictPopulate: false },
+      },
     });
 
   res.status(200).json({
@@ -419,6 +467,22 @@ exports.updatePassword = catchAsyncError(async (req, res, next) => {
     .populate("questions")
     .populate({
       path: "questions",
+      populate: {
+        path: "owner",
+        options: { strictPopulate: false },
+      },
+    })
+    .populate("ongoingProjectsDev")
+    .populate({
+      path: "ongoingProjectsDev",
+      populate: {
+        path: "owner",
+        options: { strictPopulate: false },
+      },
+    })
+    .populate("ongoingProjectsClient")
+    .populate({
+      path: "ongoingProjectsClient",
       populate: {
         path: "owner",
         options: { strictPopulate: false },

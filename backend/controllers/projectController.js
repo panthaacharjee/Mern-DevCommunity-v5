@@ -99,6 +99,45 @@ exports.hireDeveloper = catchAsyncError(async (req, res, next) => {
   if (!project) {
     return next(new ErrorHandler("Project Not Found", 404));
   }
+  const developer = await User.findById(req.body.developerId);
+  if (!developer) {
+    return next(new ErrorHandler("Developer Not Found", 404));
+  }
+  await developer.ongoingProjectsDev.push(project._id);
+  await developer.save();
+  const client = await User.findById(req.user._id);
+  await client.ongoingProjectsClient.push(project._id);
+  await client.save();
+  await project.hiredDev.push(developer._id);
+  await project.save();
+  res.status(200).json({
+    success: true,
+  });
+});
+
+//Complete Projects
+exports.completeProjects = catchAsyncError(async (req, res, next) => {
+  const project = await Project.findById(req.body.projectId);
+  if (!project) {
+    return next(new ErrorHandler("Project Not Found", 404));
+  }
+  const developer = await User.findById(req.body.developerId);
+  if (!developer) {
+    return next(new ErrorHandler("Developer Not Found", 404));
+  }
+  developer.completeProjectsDev.push(project._id);
+  await developer.save();
+  const client = await User.findById(req.user._id);
+  await client.completeProjectsClient.push(project._id);
+  await client.save();
+
+  let Cbalance;
+  let Dbalance;
+  if (client.balance >= 0 && client.balance >= project.price) {
+    Cbalance = client.balance - project.price;
+    Dbalance = developer.balance + project.price;
+  }
+
   res.status(200).json({
     success: true,
   });

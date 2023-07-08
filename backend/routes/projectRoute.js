@@ -7,6 +7,7 @@ const {
   getProject,
   applyProject,
   hireDeveloper,
+  completeProjects,
 } = require("../controllers/projectController");
 
 router
@@ -21,4 +22,7 @@ router
 router
   .route("/hire/developer")
   .post(isAuthenticatedUser, authorizeRoles("client"), hireDeveloper);
+router
+  .route("/complete/project")
+  .post(isAuthenticatedUser, authorizeRoles("client"), completeProjects);
 module.exports = router;

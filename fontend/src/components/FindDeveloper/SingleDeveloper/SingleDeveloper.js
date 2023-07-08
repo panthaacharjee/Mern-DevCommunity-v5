@@ -15,10 +15,14 @@ const SingleDeveloper = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { loading, developer } = useSelector((state) => state.singleDeveloper);
+  const { user, isAuthenticated } = useSelector((state) => state.user);
   console.log(developer);
 
   const date = dateFormat(developer.createdAt, " dS mmmm, yyyy");
   const [lastIndex, setLastIndex] = useState(300);
+
+  //For Hire Developer
+  const [showHire, setShowHire] = useState(false);
 
   useEffect(() => {
     dispatch(getSingleDeveloper(id));
@@ -80,7 +84,11 @@ const SingleDeveloper = () => {
               </div>
               <div className="developer-btn">
                 <button>Message</button>
-                <button>Hire</button>
+                {isAuthenticated
+                  ? user.role === "client" && (
+                      <button onClick={() => setShowHire(true)}>Hire</button>
+                    )
+                  : null}
               </div>
             </div>
             <div className="single-developer-about-box">
@@ -162,7 +170,7 @@ const SingleDeveloper = () => {
               </div>
             </div>
           </div>
-          <Hire />
+          {showHire && <Hire developer={developer} setShowHire={setShowHire} />}
         </>
       )}
     </>

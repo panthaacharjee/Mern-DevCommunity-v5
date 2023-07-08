@@ -11,6 +11,9 @@ import {
   GET_SINGLE_PROJECT_FAIL,
   GET_SINGLE_PROJECT_REQUEST,
   GET_SINGLE_PROJECT_SUCCESS,
+  HIRE_DEVELOPER_FAIL,
+  HIRE_DEVELOPER_REQUEST,
+  HIRE_DEVELOPER_SUCCESS,
 } from "../constants/projectConstants";
 
 export const projectsReducer = (state = { projects: [] }, action) => {
@@ -73,6 +76,33 @@ export const projectReducer = (state = { project: {} }, action) => {
 
     case GET_SINGLE_PROJECT_FAIL:
     case APPLY_PROJECT_FAIL:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+
+    default:
+      return state;
+  }
+};
+
+export const hireDeveloperReducer = (state = { project: {} }, action) => {
+  switch (action.type) {
+    case HIRE_DEVELOPER_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+
+    case HIRE_DEVELOPER_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        project: action.payload,
+      };
+
+    case HIRE_DEVELOPER_FAIL:
       return {
         ...state,
         loading: false,

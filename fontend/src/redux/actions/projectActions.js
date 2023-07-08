@@ -12,6 +12,9 @@ import {
   GET_SINGLE_PROJECT_FAIL,
   GET_SINGLE_PROJECT_REQUEST,
   GET_SINGLE_PROJECT_SUCCESS,
+  HIRE_DEVELOPER_FAIL,
+  HIRE_DEVELOPER_REQUEST,
+  HIRE_DEVELOPER_SUCCESS,
 } from "../constants/projectConstants";
 
 //Get All Projects
@@ -86,6 +89,27 @@ export const applyProject = (userData, id) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: APPLY_PROJECT_FAIL,
+      payload: error.response.data.message,
+    });
+  }
+};
+
+//Hire Developer
+export const hireDeveloper = (userData) => async (dispatch) => {
+  try {
+    dispatch({ type: HIRE_DEVELOPER_REQUEST });
+    const config = { headers: { "Content-Type": "application/json" } };
+
+    const { data } = await axios.post(
+      `/api/v1/hire/developer`,
+      userData,
+      config
+    );
+
+    dispatch({ type: HIRE_DEVELOPER_SUCCESS, payload: data });
+  } catch (error) {
+    dispatch({
+      type: HIRE_DEVELOPER_FAIL,
       payload: error.response.data.message,
     });
   }

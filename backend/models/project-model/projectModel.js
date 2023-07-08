@@ -64,6 +64,7 @@ const projectSchema = new mongoose.Schema({
     type: String,
     default: "notverified",
   },
+  hiredDev: [{ type: mongoose.Schema.Types.ObjectId, ref: "user" }],
   status: {
     type: String,
     default: "applying",
