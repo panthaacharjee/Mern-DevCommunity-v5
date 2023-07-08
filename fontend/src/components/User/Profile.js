@@ -292,11 +292,24 @@ const Profile = () => {
               <Myproblems />
             </div>
           )}
-          <div
-            className={tab === 5 ? "tab-content active-content" : "tab-content"}
-          >
-            <BillingandPayments />
-          </div>
+          {user.role === "client" && (
+            <div
+              className={
+                tab === 3 ? "tab-content active-content" : "tab-content"
+              }
+            >
+              <BillingandPayments />
+            </div>
+          )}
+          {user.role === "developer" && (
+            <div
+              className={
+                tab === 5 ? "tab-content active-content" : "tab-content"
+              }
+            >
+              <BillingandPayments />
+            </div>
+          )}
         </div>
       </div>
     </>

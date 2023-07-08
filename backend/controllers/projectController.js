@@ -125,18 +125,37 @@ exports.completeProjects = catchAsyncError(async (req, res, next) => {
   if (!developer) {
     return next(new ErrorHandler("Developer Not Found", 404));
   }
-  developer.completeProjectsDev.push(project._id);
-  await developer.save();
   const client = await User.findById(req.user._id);
-  await client.completeProjectsClient.push(project._id);
-  await client.save();
 
   let Cbalance;
   let Dbalance;
-  if (client.balance >= 0 && client.balance >= project.price) {
-    Cbalance = client.balance - project.price;
-    Dbalance = developer.balance + project.price;
+  let clientBalance = parseInt(client.balance);
+  let developerBalance = parseInt(developer.balance);
+  let projectPrice = parseInt(project.price);
+
+  if (clientBalance >= 0 && clientBalance >= projectPrice) {
+    Cbalance = clientBalance - projectPrice;
+    Dbalance = developerBalance + projectPrice;
+  } else {
+    return next(new ErrorHandler("Insufficient Balance", 404));
   }
+
+  await User.findByIdAndUpdate(req.user._id, { $set: { balance: Cbalance } });
+  await User.findByIdAndUpdate(req.body.developerId, {
+    $set: { balance: Dbalance },
+  });
+
+  developer.completeProjectsDev.push(project._id);
+
+  const dIndex = developer.ongoingProjectsDev.indexOf(project._id);
+  await developer.ongoingProjectsDev.splice(dIndex, 1);
+  await developer.save();
+
+  client.completeProjectsClient.push(project._id);
+
+  const cIndex = client.ongoingProjectsClient.indexOf(project._id);
+  await client.ongoingProjectsClient.splice(cIndex, 1);
+  await client.save();
 
   res.status(200).json({
     success: true,

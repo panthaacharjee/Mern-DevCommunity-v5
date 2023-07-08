@@ -4,8 +4,12 @@ import { Link } from "react-router-dom";
 import ReactTimeAgos from "../CustomComponent/ReactTimeAgos";
 import { GoLocation } from "react-icons/go";
 import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { completeProject } from "../../redux/actions/projectActions";
 
 const Project = ({ val, options, setAppliedDev, setAppliedDevData }) => {
+  const dispatch = useDispatch();
+
   let about = val.about.substr(0, 250) + "............";
 
   //Project Save
@@ -22,6 +26,16 @@ const Project = ({ val, options, setAppliedDev, setAppliedDevData }) => {
   const handleShow = () => {
     setAppliedDev(true);
     setAppliedDevData(val);
+  };
+
+  //Handle Comlete Project
+  const handleCompleteProject = () => {
+    console.log(val.hiredDev[0], val._id);
+    const data = {
+      developerId: val.hiredDev[0],
+      projectId: val._id,
+    };
+    dispatch(completeProject(data));
   };
 
   return (
@@ -90,7 +104,10 @@ const Project = ({ val, options, setAppliedDev, setAppliedDevData }) => {
           </button>
         )}
         {options.complite && (
-          <button className="applied-project-developer-btn">
+          <button
+            className="applied-project-developer-btn"
+            onClick={handleCompleteProject}
+          >
             Complite Project
           </button>
         )}

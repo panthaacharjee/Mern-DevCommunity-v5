@@ -27,6 +27,7 @@ import {
   jobsReducer,
 } from "./reducers/jobReducers";
 import {
+  completeProjectReducer,
   hireDeveloperReducer,
   projectReducer,
   projectsReducer,
@@ -53,6 +54,7 @@ const reducer = combineReducers({
   developer: allDeveloperDetailReducer,
   singleDeveloper: singleDeveloperReducer,
   hireDeveloper: hireDeveloperReducer,
+  completeProject: completeProjectReducer,
 });
 const middleware = [thunk];
 

@@ -1,22 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Hire.css";
 import { RxCross1 } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
 import { hireDeveloper } from "../../redux/actions/projectActions";
 import Loader from "../Loader/Loader";
+import { toast } from "react-toastify";
+import { clearErrors } from "../../redux/actions/projectActions";
 
 const Hire = ({ developer, setShowHire }) => {
   const dispatch = useDispatch();
-  const { loading } = useSelector((state) => state.hireDeveloper);
+  const { loading, error } = useSelector((state) => state.hireDeveloper);
 
-  const [projectId, setProjectId] = useState();
+  const [projectId, setProjectId] = useState(null);
   const handleHire = () => {
-    const data = {
-      developerId: developer._id,
-      projectId: projectId,
-    };
-    dispatch(hireDeveloper(data));
+    if (projectId === null) {
+      toast("Project Id is Required");
+    } else {
+      const data = {
+        developerId: developer._id,
+        projectId: projectId,
+      };
+      dispatch(hireDeveloper(data));
+      setProjectId(null);
+    }
   };
+  useEffect(() => {
+    if (error) {
+      toast(error);
+    }
+    clearErrors();
+  }, [error, clearErrors]);
   return (
     <>
       {loading ? (
@@ -35,7 +48,6 @@ const Hire = ({ developer, setShowHire }) => {
               <input
                 type="text"
                 placeholder="Enter your project Id"
-                required
                 onChange={(e) => setProjectId(e.target.value)}
               />
               <button onClick={handleHire}>Hire</button>

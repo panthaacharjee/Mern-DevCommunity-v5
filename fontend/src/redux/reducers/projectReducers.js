@@ -14,6 +14,10 @@ import {
   HIRE_DEVELOPER_FAIL,
   HIRE_DEVELOPER_REQUEST,
   HIRE_DEVELOPER_SUCCESS,
+  CLEAR_ERRORS,
+  COMPLETE_PROJECT_REQUEST,
+  COMPLETE_PROJECT_SUCCESS,
+  COMPLETE_PROJECT_FAIL,
 } from "../constants/projectConstants";
 
 export const projectsReducer = (state = { projects: [] }, action) => {
@@ -109,6 +113,43 @@ export const hireDeveloperReducer = (state = { project: {} }, action) => {
         error: action.payload,
       };
 
+    case CLEAR_ERRORS:
+      return {
+        ...state,
+        error: null,
+      };
+    default:
+      return state;
+  }
+};
+
+export const completeProjectReducer = (state = { project: {} }, action) => {
+  switch (action.type) {
+    case COMPLETE_PROJECT_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+
+    case COMPLETE_PROJECT_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        project: action.payload,
+      };
+
+    case COMPLETE_PROJECT_FAIL:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+
+    case CLEAR_ERRORS:
+      return {
+        ...state,
+        error: null,
+      };
     default:
       return state;
   }

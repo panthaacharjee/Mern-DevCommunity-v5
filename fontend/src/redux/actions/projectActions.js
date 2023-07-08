@@ -3,6 +3,10 @@ import {
   APPLY_PROJECT_FAIL,
   APPLY_PROJECT_REQUEST,
   APPLY_PROJECT_SUCCESS,
+  CLEAR_ERRORS,
+  COMPLETE_PROJECT_FAIL,
+  COMPLETE_PROJECT_REQUEST,
+  COMPLETE_PROJECT_SUCCESS,
   CREATE_PROJECT_FAIL,
   CREATE_PROJECT_REQUEST,
   CREATE_PROJECT_SUCCESS,
@@ -113,4 +117,30 @@ export const hireDeveloper = (userData) => async (dispatch) => {
       payload: error.response.data.message,
     });
   }
+};
+
+//Complete Project
+export const completeProject = (userData) => async (dispatch) => {
+  try {
+    dispatch({ type: COMPLETE_PROJECT_REQUEST });
+    const config = { headers: { "Content-Type": "application/json" } };
+
+    const { data } = await axios.post(
+      `/api/v1/complete/project`,
+      userData,
+      config
+    );
+
+    dispatch({ type: COMPLETE_PROJECT_SUCCESS, payload: data });
+  } catch (error) {
+    dispatch({
+      type: COMPLETE_PROJECT_FAIL,
+      payload: error.response.data.message,
+    });
+  }
+};
+
+// Clearing Errors
+export const clearErrors = () => async (dispatch) => {
+  dispatch({ type: CLEAR_ERRORS });
 };
